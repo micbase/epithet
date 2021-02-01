@@ -4,7 +4,7 @@ DOCKER_TEST_SSHD_VERSION := 5
 all: test build		## run tests and build binaries
 
 epithet-agent: internal/agent/agent.pb.go
-	go build ./cmd/epithet-agent
+	CGO_ENABLED=1 go build ./cmd/epithet-agent
 
 epithet-ca: 
 	go build ./cmd/epithet-ca
