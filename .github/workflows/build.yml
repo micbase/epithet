@@ -23,4 +23,5 @@ jobs:
         v: true
         x: true
         ldflags: -s -w
+    - name: Build
       run: make all
