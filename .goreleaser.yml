@@ -47,3 +47,16 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+brews:
+  - name: epithet
+    tap:
+      owner: epithet-ssh
+      name: homebrew-epithet
+    commit_author:
+      name: Epithet Bot
+      email: bot@epithet.io
+    folder: Formula
+    caveats: "Installs the binaries, but no configs"
+    homepage: "https://epithet.io/"
+    test: |
+      system "#{bin}/epithet-agent --version"
